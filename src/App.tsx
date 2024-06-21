@@ -1,10 +1,15 @@
 import React from 'react';
 import './App.css';
-import { Authorization } from './components/_general/Authorization/Authorization';
+import { AuthorizationPage } from './components/_general/AuthorizationPage/AuthorizationPage';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <Authorization></Authorization>
+    <BrowserRouter>
+      <Routes>
+        <Route path="*" element={<AuthorizationPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
